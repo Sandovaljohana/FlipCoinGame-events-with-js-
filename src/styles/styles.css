@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+body{
+    height: 100%;
+    background-color: rgb(212, 247, 247);
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: rgb(14, 53, 61);
+}
+
+.container {
+    background-color: #edf4f4;
+    width: 400px;
+    padding: 35px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 65%;
+    left: 50%;
+    box-shadow: 15px 30px 35px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+.coin {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: 32px auto;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.coin img {
+    width: 100%;
+}
+
+
+.heads, .tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.tails {
+    transform: rotateX(180deg);
+}
+
+
+@keyframes spin-tails {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(1980deg);
+    }
+}
+
+@keyframes spin-heads {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(2160deg);
+    }
+}
+
+.stats {
+    display:flex;
+    justify-content: space-around;
+    background:rgb(14, 53, 61);
+    color: white;
+    font-size: 25px;
+    padding: 20px ;
+    margin-top: 55px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(0,139, 253, 0.25);
+}
+
+.stats p:nth-last-child(1){
+    margin-left: 50%;
+}
+
+.buttons {
+    display: flex;
+    justify-content:space-around;
+}
+
+button {
+    width: 150px;
+    padding: 15px 0;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#flip-button {
+    background: rgb(0, 192, 218);
+    color: rgb(0, 44, 50);
+}
+
+#flip-button:disabled{
+    background-color: #c7e4fc;
+    border-color: #e1e0ee;
+    color: #101020;
+}
+
+#reset-button {
+    background: rgb(0, 216, 176);
+    color: rgb(0, 85, 110);
+}
+
