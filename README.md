@@ -2,6 +2,10 @@
 
 ![GAME](src/images/flipcoingame.png)
 
+## 🐋  Try it 
+
+flipcoinwhale.netlify.app
+
 Welcome to the FlipCoin game implemented in JavaScript. This is a fun and simple coin-flipping game where you can see if the coin lands on heads or tails, and it keeps track of the number of times each side appears.
 
 ## 🐋  How to Play
